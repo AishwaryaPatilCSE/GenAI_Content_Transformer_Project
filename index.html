@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GenAI Content Transformer</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>GenAI Content Transformer</h1>
+      <p>Transform one source into multiple communication deliverables.</p>
+    </div>
+    <span class="badge">GenAI Platform</span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Source Content</h2>
+      <textarea id="source" name="source_text" placeholder="Paste an article, report, advisory, research content, prompt, or any high-quality English text..."></textarea>
+      <div class="or">OR</div>
+      <input id="file" type="file" accept=".txt,.md,.pdf,.docx,.png,.jpg,.jpeg,.webp,.mp4,.mov,.avi,.mkv,.webm,.m4v">
+      <small>Accepted: TXT, MD, PDF, DOCX, images and video. Max 50 MB.</small>
+    </section>
+
+    <section class="card">
+      <h2>2. Generation Controls</h2>
+      <div class="grid">
+        <label>Target Audience
+          <select id="audience"><option>General</option><option>Students</option><option>Executives</option><option>Developers</option><option>Customers</option><option>Government / Officials</option></select>
+        </label>
+        <label>Tone
+          <select id="tone"><option>Professional</option><option>Formal</option><option>Friendly</option><option>Persuasive</option><option>Educational</option><option>Urgent</option></select>
+        </label>
+        <label>Language
+          <select id="language"><option>English</option><option>Hindi</option><option>Marathi</option></select>
+        </label>
+        <label>Level of Detail
+          <select id="detail"><option>Brief</option><option selected>Medium</option><option>Detailed</option></select>
+        </label>
+        <label>Communication Objective
+          <select id="objective"><option>Inform</option><option>Educate</option><option>Promote</option><option>Warn</option><option>Summarize</option><option>Engage</option></select>
+        </label>
+        <label>Content Style
+          <select id="style"><option>Clear and professional</option><option>Concise</option><option>Technical</option><option>Storytelling</option><option>Executive</option></select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Select Output Type(s)</h2>
+      <div class="outputs">
+        <label><input type="checkbox" value="linkedin"> LinkedIn Post</label>
+        <label><input type="checkbox" value="twitter"> Twitter/X Post</label>
+        <label><input type="checkbox" value="advisory"> Advisory</label>
+        <label><input type="checkbox" value="summary"> Executive Summary</label>
+        <label><input type="checkbox" value="infographic"> Infographic</label>
+        <label><input type="checkbox" value="presentation"> Presentation</label>
+        <label><input type="checkbox" value="video"> Video Package</label>
+      </div>
+      <button id="run">Transform & Verify</button>
+      <div id="status"></div>
+    </section>
+
+    <section class="card result-card">
+      <div class="result-head">
+        <h2>4. Generated Deliverables</h2>
+        <button id="copy" class="secondary">Copy Result</button>
+      </div>
+      <pre id="result">Your generated deliverables will appear here.</pre>
+    </section>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
